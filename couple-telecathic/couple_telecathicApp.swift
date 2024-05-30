@@ -25,7 +25,7 @@ struct couple_telecathicApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SIWA()
         }
         .modelContainer(sharedModelContainer)
     }
