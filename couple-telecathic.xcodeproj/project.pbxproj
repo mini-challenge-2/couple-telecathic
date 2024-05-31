@@ -13,7 +13,7 @@
 		AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3342C06C7F80029916C /* Assets.xcassets */; };
 		AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */; };
 		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
-		BA2430032C083A0400695165 /* SIWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2430022C083A0400695165 /* SIWA.swift */; };
+		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
 		DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */; };
 		DE215EB32C09839200E37C97 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE215EB22C09839200E37C97 /* .gitignore */; };
 		DE215EB52C098B5700E37C97 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB42C098B5700E37C97 /* Theme.swift */; };
@@ -33,8 +33,7 @@
 		AFBFD3342C06C7F80029916C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
-		BA2430022C083A0400695165 /* SIWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWA.swift; sourceTree = "<group>"; };
-		BA2430042C083A2E00695165 /* couple-telecathic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic.entitlements"; sourceTree = "<group>"; };
+		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
 		DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessage.swift; sourceTree = "<group>"; };
 		DE215EB22C09839200E37C97 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE215EB42C098B5700E37C97 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -87,7 +86,7 @@
 				AFBFD3362C06C7F80029916C /* Preview Content */,
 				DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */,
 				DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */,
-				BA2430022C083A0400695165 /* SIWA.swift */,
+				DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */,
 				DE215EB22C09839200E37C97 /* .gitignore */,
 				DE215EB42C098B5700E37C97 /* Theme.swift */,
 				DE215EB62C0AD10400E37C97 /* SpecialDay.swift */,
@@ -179,6 +178,7 @@
 				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
 				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
 				DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */,
+				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
 				DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */,
 				DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */,
