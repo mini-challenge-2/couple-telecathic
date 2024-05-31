@@ -12,7 +12,7 @@
 		AFBFD3332C06C7F70029916C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD3322C06C7F70029916C /* Item.swift */; };
 		AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3342C06C7F80029916C /* Assets.xcassets */; };
 		AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */; };
-		BA2430032C083A0400695165 /* SIWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2430022C083A0400695165 /* SIWA.swift */; };
+		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,7 @@
 		AFBFD3322C06C7F70029916C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AFBFD3342C06C7F80029916C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BA2430022C083A0400695165 /* SIWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWA.swift; sourceTree = "<group>"; };
-		BA2430042C083A2E00695165 /* couple-telecathic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic.entitlements"; sourceTree = "<group>"; };
+		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +61,7 @@
 				AFBFD3322C06C7F70029916C /* Item.swift */,
 				AFBFD3342C06C7F80029916C /* Assets.xcassets */,
 				AFBFD3362C06C7F80029916C /* Preview Content */,
-				BA2430022C083A0400695165 /* SIWA.swift */,
+				DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */,
 			);
 			path = "couple-telecathic";
 			sourceTree = "<group>";
@@ -145,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
 				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
 				AFBFD3332C06C7F70029916C /* Item.swift in Sources */,
