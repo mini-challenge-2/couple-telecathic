@@ -12,11 +12,10 @@
 		AFBFD3332C06C7F70029916C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD3322C06C7F70029916C /* Item.swift */; };
 		AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3342C06C7F80029916C /* Assets.xcassets */; };
 		AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */; };
-<<<<<<< HEAD
-		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
-=======
 		BA2430032C083A0400695165 /* SIWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2430022C083A0400695165 /* SIWA.swift */; };
->>>>>>> 1867259eb9c1629fb2e8d4eadb2c05f1c00bf2c7
+		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
+		DE215EB32C09839200E37C97 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE215EB22C09839200E37C97 /* .gitignore */; };
+		DE215EB52C098B5700E37C97 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB42C098B5700E37C97 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +25,11 @@
 		AFBFD3322C06C7F70029916C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AFBFD3342C06C7F80029916C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
-=======
 		BA2430022C083A0400695165 /* SIWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWA.swift; sourceTree = "<group>"; };
 		BA2430042C083A2E00695165 /* couple-telecathic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic.entitlements"; sourceTree = "<group>"; };
->>>>>>> 1867259eb9c1629fb2e8d4eadb2c05f1c00bf2c7
+		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
+		DE215EB22C09839200E37C97 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DE215EB42C098B5700E37C97 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +68,10 @@
 				AFBFD3322C06C7F70029916C /* Item.swift */,
 				AFBFD3342C06C7F80029916C /* Assets.xcassets */,
 				AFBFD3362C06C7F80029916C /* Preview Content */,
-<<<<<<< HEAD
 				DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */,
-=======
 				BA2430022C083A0400695165 /* SIWA.swift */,
->>>>>>> 1867259eb9c1629fb2e8d4eadb2c05f1c00bf2c7
+				DE215EB22C09839200E37C97 /* .gitignore */,
+				DE215EB42C098B5700E37C97 /* Theme.swift */,
 			);
 			path = "couple-telecathic";
 			sourceTree = "<group>";
@@ -146,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */,
+				DE215EB32C09839200E37C97 /* .gitignore in Resources */,
 				AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +158,7 @@
 				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
 				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
+				DE215EB52C098B5700E37C97 /* Theme.swift in Sources */,
 				AFBFD3332C06C7F70029916C /* Item.swift in Sources */,
 				AFBFD32F2C06C7F70029916C /* couple_telecathicApp.swift in Sources */,
 			);
