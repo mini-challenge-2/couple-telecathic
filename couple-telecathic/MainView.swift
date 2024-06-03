@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MainView: View {
     init() {
@@ -31,9 +32,9 @@ struct MainView: View {
                 MessageListView()
                     .background(Color("Surface"))
             }
-                .tabItem {
-                    Label("Miss You", systemImage: "envelope")
-                }
+            .tabItem {
+                Label("Miss You", systemImage: "envelope")
+            }
             
             
             NavigationStack{
@@ -42,17 +43,25 @@ struct MainView: View {
                     .navigationTitle("Special Day")
                     .navigationBarTitleDisplayMode(.large)
             }
-                .tabItem {
-                    Label("Special Day", systemImage: "heart")
-                }
+            .tabItem {
+                Label("Special Day", systemImage: "heart")
+            }
+            
+            NavigationStack{
+                ObserveScreen()
+                    .background(Color("Surface"))
+            }
+            .tabItem {
+                Label("Observe", systemImage: "building")
+            }
             
             NavigationStack{
                 ProfileScreen()
                     .background(Color("Surface"))
             }
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
+            .tabItem {
+                Label("Profile", systemImage: "person")
+            }
         }
     }
 }
