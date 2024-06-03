@@ -21,7 +21,7 @@ struct ObserveScreen: View {
             }.padding(20)
             HStack{
                 VStack(alignment: .leading){
-                    Text("📍 Bali, Indonesia").font(.largeTitle).fontWeight(.bold)
+                    Text("📍Bali, Indonesia").font(.title).fontWeight(.bold)
                     Text("Sunnny Cloudy").font(.title2).fontWeight(.semibold)
                     Text("13:00").font(.headline).foregroundStyle(.grayDisabled)
                 }
@@ -33,8 +33,20 @@ struct ObserveScreen: View {
             VStack(alignment: .center){
                 Text("25°").font(.system(size: 76)).fontWeight(.bold)
                 HStack{
-                    Image("sunny-cloudy").resizable().frame(maxHeight: 48)
+                    Image("sunny-cloudy")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: 141, maxHeight: 60)
+                    
+                    Image("cloud")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: 141, maxHeight: 60)
                 }
+                Image("indonesia")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 250, maxHeight: 250)
             }
             Spacer()
         }.navigationTitle("Observe")
