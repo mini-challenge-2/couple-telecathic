@@ -67,6 +67,7 @@ struct MessageListView: View {
             Text("Miss You").font(.system(size: 34, weight: .bold))
                 .padding(.top, 47)
             Text("Connect with your soulmate by sending a warm message").font(.system(size: 12, weight: .light))
+            
                 .padding(.bottom, 16)
                 
             VStack(spacing: 16) {

@@ -13,9 +13,13 @@
 		AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3342C06C7F80029916C /* Assets.xcassets */; };
 		AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */; };
 		BA2430032C083A0400695165 /* SIWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2430022C083A0400695165 /* SIWA.swift */; };
-		DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */; };
+		DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */; };
 		DE215EB32C09839200E37C97 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE215EB22C09839200E37C97 /* .gitignore */; };
 		DE215EB52C098B5700E37C97 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB42C098B5700E37C97 /* Theme.swift */; };
+		DE215EB72C0AD10400E37C97 /* SpecialDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB62C0AD10400E37C97 /* SpecialDay.swift */; };
+		DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB82C0B6A7000E37C97 /* MainView.swift */; };
+		DE215EBB2C0B71AB00E37C97 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */; };
+		DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,13 @@
 		AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA2430022C083A0400695165 /* SIWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWA.swift; sourceTree = "<group>"; };
 		BA2430042C083A2E00695165 /* couple-telecathic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic.entitlements"; sourceTree = "<group>"; };
-		DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessageItem.swift; sourceTree = "<group>"; };
+		DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessage.swift; sourceTree = "<group>"; };
 		DE215EB22C09839200E37C97 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE215EB42C098B5700E37C97 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DE215EB62C0AD10400E37C97 /* SpecialDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDay.swift; sourceTree = "<group>"; };
+		DE215EB82C0B6A7000E37C97 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +70,20 @@
 		AFBFD32D2C06C7F70029916C /* couple-telecathic */ = {
 			isa = PBXGroup;
 			children = (
+				DE215EB82C0B6A7000E37C97 /* MainView.swift */,
 				BA2430042C083A2E00695165 /* couple-telecathic.entitlements */,
 				AFBFD32E2C06C7F70029916C /* couple_telecathicApp.swift */,
 				AFBFD3302C06C7F70029916C /* ContentView.swift */,
 				AFBFD3322C06C7F70029916C /* Item.swift */,
 				AFBFD3342C06C7F80029916C /* Assets.xcassets */,
 				AFBFD3362C06C7F80029916C /* Preview Content */,
-				DE02C0FA2C08215B0025AC63 /* MissYouMessageItem.swift */,
+				DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */,
 				BA2430022C083A0400695165 /* SIWA.swift */,
 				DE215EB22C09839200E37C97 /* .gitignore */,
 				DE215EB42C098B5700E37C97 /* Theme.swift */,
+				DE215EB62C0AD10400E37C97 /* SpecialDay.swift */,
+				DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */,
+				DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */,
 			);
 			path = "couple-telecathic";
 			sourceTree = "<group>";
@@ -155,10 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
+				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
+				DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */,
+				DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */,
 				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
+				DE215EBB2C0B71AB00E37C97 /* ProfileScreen.swift in Sources */,
 				DE215EB52C098B5700E37C97 /* Theme.swift in Sources */,
+				DE215EB72C0AD10400E37C97 /* SpecialDay.swift in Sources */,
 				AFBFD3332C06C7F70029916C /* Item.swift in Sources */,
 				AFBFD32F2C06C7F70029916C /* couple_telecathicApp.swift in Sources */,
 			);
@@ -295,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic/Preview Content\"";
-				DEVELOPMENT_TEAM = W72MJZ6SR4;
+				DEVELOPMENT_TEAM = DJFUU6576B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -325,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic/Preview Content\"";
-				DEVELOPMENT_TEAM = W72MJZ6SR4;
+				DEVELOPMENT_TEAM = DJFUU6576B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
