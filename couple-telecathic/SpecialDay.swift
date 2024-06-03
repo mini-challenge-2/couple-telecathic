@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SpecialDayItemComponent: View {
-    @Binding var specialDayItem: SpecialDayItem
+    var specialDayItem: SpecialDay
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)){
-            Rectangle().fill(specialDayItem.color).cornerRadius(8)
+            Rectangle().fill(Color(specialDayItem.color)).cornerRadius(8)
             
             HStack(alignment: .center){
                 VStack(alignment: .leading){
                     Text(specialDayItem.type == SpecialDayType.counting.rawValue ? "It's been" : "There are").font(.system(size: 11))
-                    Text("\(specialDayItem.days) days").font(.system(size: 32))
+                    
+                    let daysDifference = calculateDaysDifference(from: specialDayItem.date, type: specialDayItem.type)
+                    Text("\(daysDifference) days").font(.system(size: 32))
                     HStack(alignment: .bottom){
                         Text(specialDayItem.type == SpecialDayType.counting.rawValue ? "since our" : "to our").font(.system(size: 16))
                         Text(specialDayItem.label).font(.system(size: 16, weight: .bold))
@@ -28,14 +31,17 @@ struct SpecialDayItemComponent: View {
             }.frame(maxWidth: .infinity).padding(.vertical,16).padding(.horizontal, 23)
         }.frame(maxWidth: .infinity,maxHeight: 106).padding(.horizontal, 21)
     }
-}
-
-struct SpecialDayItem{
-    var days: Int
-    var label: String
-    var type: String
-    var color: Color
-    var image: String
+    
+    func calculateDaysDifference(from date: Date, type: String) -> Int {
+            let calendar = Calendar.current
+            let currentDate = Date()
+            
+            if type == SpecialDayType.countdown.rawValue {
+                return calendar.dateComponents([.day], from: currentDate, to: date).day ?? 0
+            } else {
+                return calendar.dateComponents([.day], from: date, to: currentDate).day ?? 0
+            }
+        }
 }
 
 enum SpecialDayType: String, CaseIterable{
@@ -44,28 +50,25 @@ enum SpecialDayType: String, CaseIterable{
 }
 
 struct SpecialDayScreen: View{
-    @State var specialDayItem: [SpecialDayItem] = [
-        SpecialDayItem(days: 3006, label: "First Day", type: SpecialDayType.counting.rawValue, color: Color("PastelPink"), image: "LoveCupid"),
-        SpecialDayItem(days: 33, label: "Anniversary", type: SpecialDayType.counting.rawValue, color: Color("PastelYellow"), image: "MissCupid"),
-        SpecialDayItem(days: 301, label: "First Date", type: SpecialDayType.counting.rawValue, color: Color("PastelBlue"), image: "Arrow"),
-    ]
+    @Query var specialDays : [SpecialDay]
+    @Environment(\.modelContext) var modelContext
     
     @State var addModalPresented = false
     @State var newSpecialDayLabel = ""
     @State var newSpecialDayDate: Date = Date()
     @State var newSpecialDayType: String = SpecialDayType.countdown.rawValue
-    @State var newSpecialDayColor: Color = Color("PastelYellow")
+    @State var newSpecialDayColor: String = "PastelYellow"
     @State var newSpecialDayImage: String = "Heart"
     @State var isTitleValid: Bool = true
     @State var showConfirmationDialog: Bool = false
     @State var allowDismiss: Bool = false
     
-    let colorOption = [Color("PastelYellow"),
-                       Color("PastelBlue"),
-                       Color("PastelGreen"),
-                       Color("PastelOrange"),
-                       Color("PastelPink"),
-                       Color("PastelPurple")]
+    let colorOption = ["PastelYellow",
+                       "PastelBlue",
+                       "PastelGreen",
+                       "PastelOrange",
+                       "PastelPink",
+                       "PastelPurple"]
     let imageOption = ["Heart", "LoveCupid", "MissCupid", "Arrow"]
     let specialDayTypeOption : [String] = SpecialDayType.allCases.map{ $0.rawValue }
     
@@ -87,9 +90,9 @@ struct SpecialDayScreen: View{
             }.frame(maxWidth: .infinity).padding(.horizontal, 23)
             ScrollView{
                 VStack{
-                    ForEach($specialDayItem, id: \..label) { $specialDayItem in
-                        SpecialDayItemComponent(specialDayItem: $specialDayItem)
-                        .padding(.vertical, 8)
+                    ForEach(specialDays) { specialDay in
+                        SpecialDayItemComponent(specialDayItem: specialDay)
+                        .padding(.vertical, 6)
                     }
                 }
             }
@@ -118,9 +121,6 @@ struct SpecialDayScreen: View{
                         
                         HStack{
                             Text("Type").font(.system(size: 17))
-                            Spacer()
-                        }
-                        HStack{
                             Picker("Type",
                                       selection: $newSpecialDayType) {
                                       ForEach(specialDayTypeOption, id: \.self) { type in
@@ -130,8 +130,8 @@ struct SpecialDayScreen: View{
                             .onChange(of: newSpecialDayType) {
                                     updateDateRange()
                                 }
+                            Spacer()
                         }
-                        
                         HStack{
                             Text("Date").font(.system(size: 17))
                             Spacer()
@@ -202,13 +202,12 @@ struct SpecialDayScreen: View{
                                     isTitleValid = false
                                 } else {
                                     isTitleValid = true
-                                    let daysDifference = calculateDaysDifference(from: newSpecialDayDate, type: newSpecialDayType)
-                                    specialDayItem.append(SpecialDayItem(
-                                        days: daysDifference,
+                                    modelContext.insert(SpecialDay(
+                                        date: newSpecialDayDate,
                                         label: newSpecialDayLabel,
                                         type: newSpecialDayType,
                                         color: newSpecialDayColor,
-                                        image: "LoveCupid"
+                                        image: newSpecialDayImage
                                     ))
                                     reset()
                                     addModalPresented.toggle()
@@ -223,17 +222,6 @@ struct SpecialDayScreen: View{
                 }
             }
     }
-    
-    func calculateDaysDifference(from date: Date, type: String) -> Int {
-            let calendar = Calendar.current
-            let currentDate = Date()
-            
-            if type == SpecialDayType.countdown.rawValue {
-                return calendar.dateComponents([.day], from: currentDate, to: date).day ?? 0
-            } else {
-                return calendar.dateComponents([.day], from: date, to: currentDate).day ?? 0
-            }
-        }
     
     func reset(){
         newSpecialDayDate = Date()
@@ -253,15 +241,15 @@ struct SpecialDayScreen: View{
 }
 
 struct ColorOption: View{
-    let color: Color
-    @Binding var selectedColor : Color
+    let color: String
+    @Binding var selectedColor : String
     
     var body: some View{
         Button(action: {
             selectedColor = color
         }){
             ZStack{
-                Rectangle().fill(color).cornerRadius(12).frame(maxWidth: 48, maxHeight: 48).overlay(
+                Rectangle().fill(Color(color)).cornerRadius(12).frame(maxWidth: 48, maxHeight: 48).overlay(
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(selectedColor == color ? Color("Primary") : .gray, lineWidth: 2)
                 )

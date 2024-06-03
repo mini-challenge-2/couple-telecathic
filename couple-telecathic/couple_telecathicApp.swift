@@ -13,6 +13,7 @@ struct couple_telecathicApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            SpecialDay.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -28,6 +29,6 @@ struct couple_telecathicApp: App {
 //            SIWA()
             MainView()
         }
-//        .modelContainer(sharedModelContainer)
+        .modelContainer(sharedModelContainer)
     }
 }

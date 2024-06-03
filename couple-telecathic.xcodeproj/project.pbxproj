@@ -21,6 +21,8 @@
 		DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB82C0B6A7000E37C97 /* MainView.swift */; };
 		DE215EBB2C0B71AB00E37C97 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */; };
 		DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */; };
+		DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBE2C0D6AD300E37C97 /* Couple.swift */; };
+		DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DE215EB82C0B6A7000E37C97 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveScreen.swift; sourceTree = "<group>"; };
+		DE215EBE2C0D6AD300E37C97 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
+		DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDayItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 		AFBFD32D2C06C7F70029916C /* couple-telecathic */ = {
 			isa = PBXGroup;
 			children = (
+				DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */,
+				DE215EBE2C0D6AD300E37C97 /* Couple.swift */,
 				DE215EB82C0B6A7000E37C97 /* MainView.swift */,
 				BA2430042C083A2E00695165 /* couple-telecathic.entitlements */,
 				AFBFD32E2C06C7F70029916C /* couple_telecathicApp.swift */,
@@ -172,7 +178,9 @@
 			files = (
 				DE02C0FB2C08215B0025AC63 /* MissYouMessageItem.swift in Sources */,
 				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
+				DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
+				DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */,
 				DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */,
 				DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */,
 				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
@@ -328,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeleco.couple-telecathic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -358,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeleco.couple-telecathic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
