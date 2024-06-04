@@ -22,7 +22,40 @@
 		DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */; };
 		DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EBE2C0D6AD300E37C97 /* Couple.swift */; };
 		DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */; };
+		DE9BFFA72C0ED1FD0049234B /* couple_telecathic_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFA62C0ED1FD0049234B /* couple_telecathic_watchApp.swift */; };
+		DE9BFFA92C0ED1FD0049234B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFA82C0ED1FD0049234B /* ContentView.swift */; };
+		DE9BFFAB2C0ED1FF0049234B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9BFFAA2C0ED1FF0049234B /* Assets.xcassets */; };
+		DE9BFFAE2C0ED1FF0049234B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9BFFAD2C0ED1FF0049234B /* Preview Assets.xcassets */; };
+		DE9BFFB12C0ED1FF0049234B /* couple-telecathic-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DE9BFFA42C0ED1FD0049234B /* couple-telecathic-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DE9BFFB82C0ED2120049234B /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9BFFB72C0ED2120049234B /* WatchConnectivity.framework */; };
+		DE9BFFBA2C0ED2210049234B /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9BFFB92C0ED2210049234B /* WatchConnectivity.framework */; };
+		DE9BFFBC2C0EEB7A0049234B /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */; };
+		DE9BFFBE2C0EEDE00049234B /* IOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFBD2C0EEDE00049234B /* IOSConnector.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE9BFFAF2C0ED1FF0049234B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFBFD3232C06C7F70029916C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9BFFA32C0ED1FD0049234B;
+			remoteInfo = "couple-telecathic-watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE9BFFB52C0ED1FF0049234B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DE9BFFB12C0ED1FF0049234B /* couple-telecathic-watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AFBFD32B2C06C7F70029916C /* couple-telecathic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "couple-telecathic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +75,15 @@
 		DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveScreen.swift; sourceTree = "<group>"; };
 		DE215EBE2C0D6AD300E37C97 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
 		DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDayItem.swift; sourceTree = "<group>"; };
+		DE9BFFA42C0ED1FD0049234B /* couple-telecathic-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "couple-telecathic-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9BFFA62C0ED1FD0049234B /* couple_telecathic_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = couple_telecathic_watchApp.swift; sourceTree = "<group>"; };
+		DE9BFFA82C0ED1FD0049234B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE9BFFAA2C0ED1FF0049234B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE9BFFAD2C0ED1FF0049234B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE9BFFB72C0ED2120049234B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		DE9BFFB92C0ED2210049234B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
+		DE9BFFBD2C0EEDE00049234B /* IOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +91,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9BFFB82C0ED2120049234B /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9BFFA12C0ED1FD0049234B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9BFFBA2C0ED2210049234B /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				AFBFD32D2C06C7F70029916C /* couple-telecathic */,
+				DE9BFFA52C0ED1FD0049234B /* couple-telecathic-watch Watch App */,
 				AFBFD32C2C06C7F70029916C /* Products */,
+				DE9BFFB62C0ED2120049234B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBFD32B2C06C7F70029916C /* couple-telecathic.app */,
+				DE9BFFA42C0ED1FD0049234B /* couple-telecathic-watch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +144,7 @@
 				DE215EB62C0AD10400E37C97 /* SpecialDay.swift */,
 				DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */,
 				DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */,
+				DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */,
 			);
 			path = "couple-telecathic";
 			sourceTree = "<group>";
@@ -102,6 +157,35 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DE9BFFA52C0ED1FD0049234B /* couple-telecathic-watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				DE9BFFA62C0ED1FD0049234B /* couple_telecathic_watchApp.swift */,
+				DE9BFFA82C0ED1FD0049234B /* ContentView.swift */,
+				DE9BFFAA2C0ED1FF0049234B /* Assets.xcassets */,
+				DE9BFFAC2C0ED1FF0049234B /* Preview Content */,
+				DE9BFFBD2C0EEDE00049234B /* IOSConnector.swift */,
+			);
+			path = "couple-telecathic-watch Watch App";
+			sourceTree = "<group>";
+		};
+		DE9BFFAC2C0ED1FF0049234B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE9BFFAD2C0ED1FF0049234B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE9BFFB62C0ED2120049234B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE9BFFB92C0ED2210049234B /* WatchConnectivity.framework */,
+				DE9BFFB72C0ED2120049234B /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,14 +196,33 @@
 				AFBFD3272C06C7F70029916C /* Sources */,
 				AFBFD3282C06C7F70029916C /* Frameworks */,
 				AFBFD3292C06C7F70029916C /* Resources */,
+				DE9BFFB52C0ED1FF0049234B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9BFFB02C0ED1FF0049234B /* PBXTargetDependency */,
+			);
+			name = "couple-telecathic";
+			productName = "couple-telecathic";
+			productReference = AFBFD32B2C06C7F70029916C /* couple-telecathic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE9BFFA32C0ED1FD0049234B /* couple-telecathic-watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9BFFB22C0ED1FF0049234B /* Build configuration list for PBXNativeTarget "couple-telecathic-watch Watch App" */;
+			buildPhases = (
+				DE9BFFA02C0ED1FD0049234B /* Sources */,
+				DE9BFFA12C0ED1FD0049234B /* Frameworks */,
+				DE9BFFA22C0ED1FD0049234B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "couple-telecathic";
-			productName = "couple-telecathic";
-			productReference = AFBFD32B2C06C7F70029916C /* couple-telecathic.app */;
+			name = "couple-telecathic-watch Watch App";
+			productName = "couple-telecathic-watch Watch App";
+			productReference = DE9BFFA42C0ED1FD0049234B /* couple-telecathic-watch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,6 +236,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					AFBFD32A2C06C7F70029916C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					DE9BFFA32C0ED1FD0049234B = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -151,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				AFBFD32A2C06C7F70029916C /* couple-telecathic */,
+				DE9BFFA32C0ED1FD0049234B /* couple-telecathic-watch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -163,6 +270,15 @@
 				AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */,
 				DE215EB32C09839200E37C97 /* .gitignore in Resources */,
 				AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9BFFA22C0ED1FD0049234B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9BFFAE2C0ED1FF0049234B /* Preview Assets.xcassets in Resources */,
+				DE9BFFAB2C0ED1FF0049234B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +295,7 @@
 				DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */,
 				DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */,
 				DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */,
+				DE9BFFBC2C0EEB7A0049234B /* WatchConnector.swift in Sources */,
 				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
 				DE215EBB2C0B71AB00E37C97 /* ProfileScreen.swift in Sources */,
 				DE215EB52C098B5700E37C97 /* Theme.swift in Sources */,
@@ -188,7 +305,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE9BFFA02C0ED1FD0049234B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9BFFA92C0ED1FD0049234B /* ContentView.swift in Sources */,
+				DE9BFFBE2C0EEDE00049234B /* IOSConnector.swift in Sources */,
+				DE9BFFA72C0ED1FD0049234B /* couple_telecathic_watchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE9BFFB02C0ED1FF0049234B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9BFFA32C0ED1FD0049234B /* couple-telecathic-watch Watch App */;
+			targetProxy = DE9BFFAF2C0ED1FF0049234B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AFBFD3392C06C7F80029916C /* Debug */ = {
@@ -313,6 +448,7 @@
 		AFBFD33C2C06C7F80029916C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "couple-telecathic/couple-telecathic.entitlements";
@@ -334,15 +470,20 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AFBFD33D2C06C7F80029916C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "couple-telecathic/couple-telecathic.entitlements";
@@ -364,9 +505,73 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DE9BFFB32C0ED1FF0049234B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic-watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DJFUU6576B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "couple-telecathic-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.liefransim.couple-telecathic";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		DE9BFFB42C0ED1FF0049234B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic-watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = DJFUU6576B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "couple-telecathic-watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.liefransim.couple-telecathic";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
@@ -387,6 +592,15 @@
 			buildConfigurations = (
 				AFBFD33C2C06C7F80029916C /* Debug */,
 				AFBFD33D2C06C7F80029916C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9BFFB22C0ED1FF0049234B /* Build configuration list for PBXNativeTarget "couple-telecathic-watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9BFFB32C0ED1FF0049234B /* Debug */,
+				DE9BFFB42C0ED1FF0049234B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
