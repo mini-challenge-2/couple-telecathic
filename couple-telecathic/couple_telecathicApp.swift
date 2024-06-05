@@ -7,9 +7,16 @@
 
 import SwiftUI
 import SwiftData
+import SwiftUI
+import FirebaseCore
+import Firebase
+import FirebaseMessaging
+import UserNotifications
 
 @main
 struct couple_telecathicApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -31,4 +38,48 @@ struct couple_telecathicApp: App {
         }
         .modelContainer(sharedModelContainer)
     }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+    
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+      
+      Messaging.messaging().delegate = self
+      UNUserNotificationCenter.current().delegate = self
+      
+      UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]){ success, _ in
+          guard success else {
+              return
+          }
+          
+          print("Success in APNS Registry")
+      }
+      
+      application.registerForRemoteNotifications()
+
+    return true
+  }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+            Messaging.messaging().apnsToken = deviceToken
+            print("APNs token retrieved: \(deviceToken)")
+        }
+        
+        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+            print("FCM token: \(String(describing: fcmToken))")
+            messaging.token { token, error in
+                if let error = error {
+                    print("Error fetching FCM token: \(error)")
+                    return
+                }
+                guard let token = token else {
+                    print("FCM token is nil")
+                    return
+                }
+                print("Token retrieved: \(token)")
+            }
+        }
+    
 }

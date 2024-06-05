@@ -31,6 +31,10 @@
 		DE9BFFBA2C0ED2210049234B /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9BFFB92C0ED2210049234B /* WatchConnectivity.framework */; };
 		DE9BFFBC2C0EEB7A0049234B /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */; };
 		DE9BFFBE2C0EEDE00049234B /* IOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BFFBD2C0EEDE00049234B /* IOSConnector.swift */; };
+		DE9BFFC42C0F543B0049234B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DE9BFFC32C0F543B0049234B /* FirebaseAnalytics */; };
+		DE9BFFC62C0F543B0049234B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DE9BFFC52C0F543B0049234B /* FirebaseFirestore */; };
+		DE9BFFC82C0F543B0049234B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = DE9BFFC72C0F543B0049234B /* FirebaseMessaging */; };
+		DE9BFFCA2C0F55520049234B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE9BFFC92C0F55520049234B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,8 @@
 		DE9BFFB92C0ED2210049234B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		DE9BFFBD2C0EEDE00049234B /* IOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSConnector.swift; sourceTree = "<group>"; };
+		DE9BFFBF2C0F00230049234B /* couple-telecathic-watch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic-watch Watch App.entitlements"; sourceTree = "<group>"; };
+		DE9BFFC92C0F55520049234B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9BFFC82C0F543B0049234B /* FirebaseMessaging in Frameworks */,
+				DE9BFFC42C0F543B0049234B /* FirebaseAnalytics in Frameworks */,
 				DE9BFFB82C0ED2120049234B /* WatchConnectivity.framework in Frameworks */,
+				DE9BFFC62C0F543B0049234B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +152,7 @@
 				DE215EB42C098B5700E37C97 /* Theme.swift */,
 				DE215EB62C0AD10400E37C97 /* SpecialDay.swift */,
 				DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */,
+				DE9BFFC92C0F55520049234B /* GoogleService-Info.plist */,
 				DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */,
 				DE9BFFBB2C0EEB7A0049234B /* WatchConnector.swift */,
 			);
@@ -160,6 +170,7 @@
 		DE9BFFA52C0ED1FD0049234B /* couple-telecathic-watch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				DE9BFFBF2C0F00230049234B /* couple-telecathic-watch Watch App.entitlements */,
 				DE9BFFA62C0ED1FD0049234B /* couple_telecathic_watchApp.swift */,
 				DE9BFFA82C0ED1FD0049234B /* ContentView.swift */,
 				DE9BFFAA2C0ED1FF0049234B /* Assets.xcassets */,
@@ -204,6 +215,11 @@
 				DE9BFFB02C0ED1FF0049234B /* PBXTargetDependency */,
 			);
 			name = "couple-telecathic";
+			packageProductDependencies = (
+				DE9BFFC32C0F543B0049234B /* FirebaseAnalytics */,
+				DE9BFFC52C0F543B0049234B /* FirebaseFirestore */,
+				DE9BFFC72C0F543B0049234B /* FirebaseMessaging */,
+			);
 			productName = "couple-telecathic";
 			productReference = AFBFD32B2C06C7F70029916C /* couple-telecathic.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +268,9 @@
 				Base,
 			);
 			mainGroup = AFBFD3222C06C7F70029916C;
+			packageReferences = (
+				DE9BFFC22C0F543B0049234B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AFBFD32C2C06C7F70029916C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +288,7 @@
 			files = (
 				AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */,
 				DE215EB32C09839200E37C97 /* .gitignore in Resources */,
+				DE9BFFCA2C0F55520049234B /* GoogleService-Info.plist in Resources */,
 				AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "couple-telecathic-watch Watch App/couple-telecathic-watch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic-watch Watch App/Preview Content\"";
@@ -550,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "couple-telecathic-watch Watch App/couple-telecathic-watch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic-watch Watch App/Preview Content\"";
@@ -606,6 +628,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE9BFFC22C0F543B0049234B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE9BFFC32C0F543B0049234B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE9BFFC22C0F543B0049234B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DE9BFFC52C0F543B0049234B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE9BFFC22C0F543B0049234B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DE9BFFC72C0F543B0049234B /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE9BFFC22C0F543B0049234B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFBFD3232C06C7F70029916C /* Project object */;
 }
