@@ -39,7 +39,7 @@ struct couple_telecathicApp: App {
         
         }
         .modelContainer(sharedModelContainer)
-        .modelContainer(for: [User.self])
+//        .modelContainer(for: [User.self])
         .environment(locationManager)
     }
 }

@@ -21,6 +21,9 @@ struct SignInView: View {
             VStack {
                 if let user = user {
                     // Display partial user info (avoid sensitive data)
+                    Text("Username is: \(user.username)")
+                        .font(.title)
+                        .foregroundStyle(.white)
                     if user.username.isEmpty {
                         NavigationLink(destination: ProfileCompletionView(user: $user), isActive: $showingProfileCompletion) {
                             EmptyView()
@@ -55,7 +58,7 @@ struct SignInView: View {
         .navigationViewStyle(StackNavigationViewStyle()) // Ensures proper behavior on all device sizes
     }
 
-    private func handleSuccessfulSignIn(with authResults: ASAuthorization) {
+    @MainActor private func handleSuccessfulSignIn(with authResults: ASAuthorization) {
         guard let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential else { return }
 
         // Extract user information from credential (consider privacy options)
@@ -86,6 +89,11 @@ struct SignInView: View {
 
     private func saveUserData(_ user: User) {
         modelContext.insert(user)
+        do {
+            try modelContext.save() // Save the context
+        } catch {
+            print("Failed to save user data: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -127,9 +135,15 @@ struct ProfileCompletionView: View {
         }
     }
 
+    @MainActor
     private func saveUserData(_ user: User) {
         // Insert the user into the model context
         modelContext.insert(user)
+        do {
+            try modelContext.save() // Save the context
+        } catch {
+            print("Failed to save user data: \(error.localizedDescription)")
+        }
     }
 }
 
