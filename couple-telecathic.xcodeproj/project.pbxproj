@@ -12,7 +12,13 @@
 		AFBFD3332C06C7F70029916C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBFD3322C06C7F70029916C /* Item.swift */; };
 		AFBFD3352C06C7F80029916C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3342C06C7F80029916C /* Assets.xcassets */; };
 		AFBFD3382C06C7F80029916C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */; };
-		BA2430032C083A0400695165 /* SIWA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2430022C083A0400695165 /* SIWA.swift */; };
+		BAABC1D92C0EFC0B00BF7CCD /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABC1D82C0EFC0B00BF7CCD /* City.swift */; };
+		BAABC1DB2C0EFC5500BF7CCD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABC1DA2C0EFC5500BF7CCD /* LocationManager.swift */; };
+		BAABC1DD2C0F075700BF7CCD /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABC1DC2C0F075700BF7CCD /* LocationDeniedView.swift */; };
+		BAABC2032C10197B00BF7CCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABC2022C10197B00BF7CCD /* User.swift */; };
+		BAABC2052C101F0100BF7CCD /* CalculateDistanceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAABC2042C101F0100BF7CCD /* CalculateDistanceExt.swift */; };
+		BACCBF462C0EB70B00F7EC9B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCBF452C0EB70B00F7EC9B /* SignInView.swift */; };
+		BACCBF482C0EBB1A00F7EC9B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACCBF472C0EBB1A00F7EC9B /* WeatherManager.swift */; };
 		DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */; };
 		DE215EB32C09839200E37C97 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE215EB22C09839200E37C97 /* .gitignore */; };
 		DE215EB52C098B5700E37C97 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE215EB42C098B5700E37C97 /* Theme.swift */; };
@@ -31,8 +37,13 @@
 		AFBFD3322C06C7F70029916C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AFBFD3342C06C7F80029916C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBFD3372C06C7F80029916C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BA2430022C083A0400695165 /* SIWA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIWA.swift; sourceTree = "<group>"; };
-		BA2430042C083A2E00695165 /* couple-telecathic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "couple-telecathic.entitlements"; sourceTree = "<group>"; };
+		BAABC1D82C0EFC0B00BF7CCD /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		BAABC1DA2C0EFC5500BF7CCD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BAABC1DC2C0F075700BF7CCD /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
+		BAABC2022C10197B00BF7CCD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BAABC2042C101F0100BF7CCD /* CalculateDistanceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateDistanceExt.swift; sourceTree = "<group>"; };
+		BACCBF452C0EB70B00F7EC9B /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		BACCBF472C0EBB1A00F7EC9B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissYouMessage.swift; sourceTree = "<group>"; };
 		DE215EB22C09839200E37C97 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE215EB42C098B5700E37C97 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -77,19 +88,24 @@
 				DE215EC02C0D83A400E37C97 /* SpecialDayItem.swift */,
 				DE215EBE2C0D6AD300E37C97 /* Couple.swift */,
 				DE215EB82C0B6A7000E37C97 /* MainView.swift */,
-				BA2430042C083A2E00695165 /* couple-telecathic.entitlements */,
 				AFBFD32E2C06C7F70029916C /* couple_telecathicApp.swift */,
 				AFBFD3302C06C7F70029916C /* ContentView.swift */,
 				AFBFD3322C06C7F70029916C /* Item.swift */,
 				AFBFD3342C06C7F80029916C /* Assets.xcassets */,
 				AFBFD3362C06C7F80029916C /* Preview Content */,
 				DE02C0FA2C08215B0025AC63 /* MissYouMessage.swift */,
-				BA2430022C083A0400695165 /* SIWA.swift */,
 				DE215EB22C09839200E37C97 /* .gitignore */,
 				DE215EB42C098B5700E37C97 /* Theme.swift */,
 				DE215EB62C0AD10400E37C97 /* SpecialDay.swift */,
 				DE215EBA2C0B71AB00E37C97 /* ProfileScreen.swift */,
 				DE215EBC2C0D4D7A00E37C97 /* ObserveScreen.swift */,
+				BACCBF452C0EB70B00F7EC9B /* SignInView.swift */,
+				BACCBF472C0EBB1A00F7EC9B /* WeatherManager.swift */,
+				BAABC1D82C0EFC0B00BF7CCD /* City.swift */,
+				BAABC1DA2C0EFC5500BF7CCD /* LocationManager.swift */,
+				BAABC1DC2C0F075700BF7CCD /* LocationDeniedView.swift */,
+				BAABC2022C10197B00BF7CCD /* User.swift */,
+				BAABC2042C101F0100BF7CCD /* CalculateDistanceExt.swift */,
 			);
 			path = "couple-telecathic";
 			sourceTree = "<group>";
@@ -174,16 +190,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
+				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
+				BAABC1D92C0EFC0B00BF7CCD /* City.swift in Sources */,
+				BACCBF482C0EBB1A00F7EC9B /* WeatherManager.swift in Sources */,
 				DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */,
+				DE215EC12C0D83A400E37C97 /* SpecialDayItem.swift in Sources */,
+				DE02C0FB2C08215B0025AC63 /* MissYouMessage.swift in Sources */,
 				AFBFD3312C06C7F70029916C /* ContentView.swift in Sources */,
 				DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */,
+				DE215EBF2C0D6AD300E37C97 /* Couple.swift in Sources */,
 				DE215EBD2C0D4D7A00E37C97 /* ObserveScreen.swift in Sources */,
+				BAABC2052C101F0100BF7CCD /* CalculateDistanceExt.swift in Sources */,
+				BAABC2032C10197B00BF7CCD /* User.swift in Sources */,
+				BACCBF462C0EB70B00F7EC9B /* SignInView.swift in Sources */,
 				DE215EB92C0B6A7000E37C97 /* MainView.swift in Sources */,
-				BA2430032C083A0400695165 /* SIWA.swift in Sources */,
 				DE215EBB2C0B71AB00E37C97 /* ProfileScreen.swift in Sources */,
 				DE215EB52C098B5700E37C97 /* Theme.swift in Sources */,
 				DE215EB72C0AD10400E37C97 /* SpecialDay.swift in Sources */,
+				BAABC1DD2C0F075700BF7CCD /* LocationDeniedView.swift in Sources */,
 				AFBFD3332C06C7F70029916C /* Item.swift in Sources */,
+				BAABC1DB2C0EFC5500BF7CCD /* LocationManager.swift in Sources */,
 				AFBFD32F2C06C7F70029916C /* couple_telecathicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,9 +345,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic/Preview Content\"";
-				DEVELOPMENT_TEAM = DJFUU6576B;
+				DEVELOPMENT_TEAM = W72MJZ6SR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Get a weather for your location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kenji.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -349,9 +376,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"couple-telecathic/Preview Content\"";
-				DEVELOPMENT_TEAM = DJFUU6576B;
+				DEVELOPMENT_TEAM = W72MJZ6SR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Get a weather for your location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -362,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liefransim.couple-telecathic";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kenji.couple-telecathic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
