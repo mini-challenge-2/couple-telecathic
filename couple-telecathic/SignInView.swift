@@ -141,6 +141,32 @@ struct ProfileCompletionView: View {
         modelContext.insert(user)
         do {
             try modelContext.save() // Save the context
+            let url = URL(string: "https://inc-leonanie-ssabrut-63663dd3.koyeb.app/api/v1/register")!
+            var request = URLRequest(url: url)
+            
+            let userData = UserModel(apple_id: user.appleid, username: user.username, sex: user.gender ? 0 : 1, email: user.email, birth: DateFormatter().string(from: user.birth_date), latitude: 1, longitude: 1)
+            print(userData)
+            let data = try! JSONEncoder().encode(userData)
+            print(data)
+            request.httpBody = data
+            request.setValue(
+                "application/json",
+                forHTTPHeaderField: "Content-Type"
+            )
+            request.httpMethod = "POST"
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                print(response!)
+
+                if statusCode == 200 {
+                    print("SUCCESS")
+                } else {
+                    print("FAILURE")
+                }
+            }
+
+            task.resume()
         } catch {
             print("Failed to save user data: \(error.localizedDescription)")
         }
