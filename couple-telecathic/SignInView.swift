@@ -144,7 +144,7 @@ struct ProfileCompletionView: View {
             let url = URL(string: "https://inc-leonanie-ssabrut-63663dd3.koyeb.app/api/v1/register")!
             var request = URLRequest(url: url)
             
-            let userData = UserModel(apple_id: user.appleid, username: user.username, sex: user.gender ? 0 : 1, email: user.email, birth: DateFormatter().string(from: user.birth_date), latitude: 1, longitude: 1)
+            let userData = UserModel(apple_id: user.appleid, username: user.username, sex: user.gender ? 0 : 1, email: "09uij@gmail.com", birth: "2002-04-17", latitude: 1, longitude: 1)
             print(userData)
             let data = try! JSONEncoder().encode(userData)
             print(data)
