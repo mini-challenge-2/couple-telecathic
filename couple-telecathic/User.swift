@@ -27,5 +27,14 @@ final class User {
         self.latitude = latitude
         self.longitude = longitude
     }
+}
 
+struct UserModel: Codable {
+    var apple_id: String
+    var username: String
+    var sex: Int
+    var email: String
+    var birth: String
+    var latitude: Double
+    var longitude: Double
 }
