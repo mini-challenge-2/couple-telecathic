@@ -17,10 +17,12 @@ import UserNotifications
 struct couple_telecathicApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @State private var locationManager = LocationManager()
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
-            SpecialDay.self
+            SpecialDay.self,
+            User.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -33,10 +35,19 @@ struct couple_telecathicApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            SIWA()
-            MainView()
+            SignInView()
+            //MainView()
+//            if locationManager.isAuthorized {
+//                MainView()
+//            } else {
+//                LocationDeniedView()
+//            }
+            
+        
         }
         .modelContainer(sharedModelContainer)
+//        .modelContainer(for: [User.self])
+        .environment(locationManager)
     }
 }
 
