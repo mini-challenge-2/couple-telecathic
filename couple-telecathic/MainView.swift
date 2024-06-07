@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct MainView: View {
+    @StateObject var watchConnector = WatchConnector()
+    
     init() {
            let tabBarAppearance = UITabBarAppearance()
            tabBarAppearance.configureWithOpaqueBackground()
