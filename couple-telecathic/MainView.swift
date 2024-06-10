@@ -10,6 +10,7 @@ import SwiftData
 
 struct MainView: View {
     @StateObject var watchConnector = WatchConnector()
+    @Environment(\.modelContext) private var modelContext
     
     init() {
            let tabBarAppearance = UITabBarAppearance()
@@ -26,6 +27,38 @@ struct MainView: View {
            if #available(iOS 15.0, *) {
                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
            }
+        
+            let url = URL(string: "https://inc-leonanie-ssabrut-63663dd3.koyeb.app/api/v1/register-device")!
+            var request = URLRequest(url: url)
+        
+            let sharedDefaults = UserDefaults(suiteName: "group.liefransim.couple-telecathic")
+            let deviceToken = sharedDefaults?.string(forKey: "deviceToken")
+        
+            let userId = UserDefaults.standard.string(forKey: "userId")
+                
+            let userData = ["user_id": userId, "token": deviceToken]
+                print(userData)
+                let data = try! JSONEncoder().encode(userData)
+                print(data)
+                request.httpBody = data
+                request.setValue(
+                    "application/json",
+                    forHTTPHeaderField: "Content-Type"
+                )
+                request.httpMethod = "POST"
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    let statusCode = (response as! HTTPURLResponse).statusCode
+                    print(response!)
+
+                    if statusCode == 200 {
+                        print("SUCCESS")
+                    } else {
+                        print("FAILURE")
+                    }
+                }
+
+                task.resume()
        }
     
     var body: some View {
@@ -41,6 +74,7 @@ struct MainView: View {
             
             NavigationStack{
                 SpecialDayScreen()
+                    .environment(\.modelContext, modelContext)
                     .background(Color("Surface"))
                     .navigationTitle("Special Day")
                     .navigationBarTitleDisplayMode(.large)
@@ -59,6 +93,8 @@ struct MainView: View {
             
             NavigationStack{
                 ProfileScreen()
+                    .environment(\.modelContext, modelContext)
+                
                     .background(Color("Surface"))
             }
             .tabItem {
