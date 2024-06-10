@@ -32,8 +32,10 @@ struct MessageComponent: View{
     var onClick: () -> Void
     
     var body: some View{
-        NavigationLink(destination: DetailView(messageItem: $messageItem, sendData: {
-            iosConnector.sendMessageToIOS()
+        NavigationLink(destination: DetailView(messageItem: $messageItem, sendData: { completion in
+            sendPushNotif(message: messageItem){
+                completion()
+            }
         })){
             ZStack{
                 HStack{
@@ -44,6 +46,40 @@ struct MessageComponent: View{
                 }
             }.frame(maxHeight: 50).padding(.horizontal, 4)
         }
+    }
+    
+    func sendPushNotif(message: MessageItem, completion: @escaping () -> Void){
+        let url = URL(string: "http://localhost:8080/send-notification")!
+        var request = URLRequest(url: url)
+            
+        let notifData = [
+            "token" : "9280d6405a9aa37301a0a1f3a906b555d2dbe301e29efdc161412efebc296e3c",
+            "title": messageItem.messageTitle,
+            "body": messageItem.messageContent
+        ]
+            print(notifData)
+            let data = try! JSONEncoder().encode(notifData)
+            print(data)
+            request.httpBody = data
+            request.setValue(
+                "application/json",
+                forHTTPHeaderField: "Content-Type"
+            )
+            request.httpMethod = "POST"
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                print(response!)
+
+                if statusCode == 200 {
+                    print("SUCCESS")
+                } else {
+                    print("FAILURE")
+                }
+                completion()
+            }
+
+            task.resume()
     }
 }
 
@@ -67,7 +103,8 @@ struct MessageItem {
 
 struct DetailView: View{
     @Binding var messageItem: MessageItem
-    var sendData: () -> Void
+    var sendData: (@escaping () -> Void) -> Void
+    @State var disableState: Bool = false
     
     var body: some View{
         VStack{
@@ -86,10 +123,18 @@ struct DetailView: View{
                 }.padding(12)
             }
             Spacer().frame(maxHeight: 8)
-            Button(action: sendData){
+            Button(action: handleSend){
                 Text("Send").font(.system(size: 24, weight: .medium)).foregroundStyle(.white)
             }.background(Color("Primary"))
                 .mask(RoundedRectangle(cornerRadius: 24))
+                .disabled(disableState)
+        }
+    }
+    
+    func handleSend() {
+        disableState = true
+        sendData{
+            disableState = false
         }
     }
 }
